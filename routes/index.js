@@ -65,7 +65,7 @@ function handleSlackRequest (req, res, next) {
 function registerHandler (handler) {
   var command = handler.command,
       pkg     = handler.pkg,
-      token   = nconf.get(handler.tokenVar),
+      token   = handler.tokenVar,
       opts    = handler.options;
 
   try {
